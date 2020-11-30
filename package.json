@@ -5,7 +5,7 @@
   "private": true,
   "url": "https://plataformasabia.com",
   "scripts": {
-    "dev": "next dev",
+    "develop": "next dev",
     "build": "next build",
     "start": "next start",
     "test": "jest",
