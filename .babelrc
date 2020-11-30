@@ -1,0 +1,30 @@
+{
+  "presets": ["next/babel", "@babel/preset-typescript"],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "displayName": true
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          // We need to check for TEST env because jest-styled-components expects classNames to contain `sc-`
+          // Actually classNames only starts with `sc-` when hash starts with a number
+          // It's an issue with SSR.
+          // https://github.com/styled-components/babel-plugin-styled-components/pull/276
+          // https://github.com/styled-components/jest-styled-components/issues/297#issuecomment-639362675
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "displayName": false
+          }
+        ]
+      ]
+    }
+  }
+}

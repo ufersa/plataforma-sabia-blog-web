@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Main /> should render the heading 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #06092b;
+  color: #fff;
+  width: 100%;
+  padding: 3rem;
+  height: 100%;
+  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  width: 35rem;
+  margin-bottom: 2rem;
+}
+
+.c2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.c4 {
+  margin-top: 3rem;
+  width: min(30rem,100%);
+}
+
+<main
+  class="c0"
+>
+  <img
+    alt="Moça com o cabelo rosa e vestes pretas, ao seu lado um quadro com as escritas Next JS e ao lado desse quadro uma pequena árvore"
+    class="c1"
+    src="/img/nextjs-illustration.svg"
+  />
+  <h1
+    class="c2"
+  >
+    Boilerplate
+  </h1>
+  <h2
+    class="c3"
+  >
+    A boilerplate with TypeScript, React, NextJS and styled-components.
+  </h2>
+  <h2
+    class="c3"
+  >
+    Created based on React Avançado by Willian Justen.
+  </h2>
+  <img
+    alt="Um rapaz segurando um símbolo de menor seguido por três pontos e um símbolo de maior, com uma moça segurando."
+    class="c4"
+    src="/img/code-typing.svg"
+  />
+</main>
+`;
