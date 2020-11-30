@@ -1,4 +1,3 @@
-import { Container } from 'components/Container';
 import Header from 'components/Header';
 
 import * as S from './styles';
@@ -9,9 +8,7 @@ export type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => (
   <S.Wrapper>
-    <Container>
-      <Header />
-    </Container>
+    <Header />
 
     <S.Content>{children}</S.Content>
   </S.Wrapper>
