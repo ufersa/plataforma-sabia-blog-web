@@ -28,8 +28,7 @@
   "plugins": [
     "react",
     "react-hooks",
-    "@typescript-eslint",
-    "simple-import-sort"
+    "@typescript-eslint"
   ],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
