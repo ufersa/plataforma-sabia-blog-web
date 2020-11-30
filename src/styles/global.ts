@@ -12,7 +12,6 @@ const GlobalStyles = createGlobalStyle`
   
 	*:focus {
 		outline: 0;
-    box-shadow: 0px 0px 4px 2px hsla(29, 94%, 62%);
 	}
 
   html {

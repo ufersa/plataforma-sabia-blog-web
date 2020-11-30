@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Post } from 'types/graphql-schema';
 import * as S from './styles';
 
@@ -21,8 +22,17 @@ const PostCard = ({
   return (
     <S.Wrapper large={large}>
       <Link href={`/${slug}`}>
-        <a>
-          <img src={thumbnail?.url || placeholder} alt="Capa do artigo" />
+        <S.PostLink>
+          <S.ImageWrapper>
+            <Image
+              src={thumbnail?.url || placeholder}
+              alt="Capa do artigo"
+              layout="responsive"
+              width={560}
+              height={380}
+              objectFit="cover"
+            />
+          </S.ImageWrapper>
 
           <S.Details>
             <S.Category>
@@ -39,7 +49,7 @@ const PostCard = ({
               })}
             </S.DateWrapper>
           </S.Details>
-        </a>
+        </S.PostLink>
       </Link>
     </S.Wrapper>
   );
