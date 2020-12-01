@@ -63,15 +63,17 @@ export const Details = styled.div`
   flex-basis: 40%;
 `;
 
-export const Category = styled.p`
+export const Category = styled.div`
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  margin-bottom: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const CategoryLabel = styled.span`
   ${({ theme: { colors, metrics } }) => css`
     margin-right: 1.2rem;
+    margin-bottom: 0.8rem;
     position: relative;
     padding: 0.2rem 0.8rem;
     max-width: fit-content;
