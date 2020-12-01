@@ -9,8 +9,7 @@ export type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => (
   <S.Wrapper>
     <Header />
-
-    <S.Content>{children}</S.Content>
+    {children}
   </S.Wrapper>
 );
 
