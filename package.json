@@ -14,8 +14,8 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
+      "npm run lint -- --fix",
+      "npm run test -- --findRelatedTests --bail"
     ]
   },
   "husky": {
