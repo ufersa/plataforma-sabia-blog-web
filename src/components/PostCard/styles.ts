@@ -40,9 +40,11 @@ export const ImageWrapper = styled.div`
     background-size: cover;
     border-radius: ${metrics.baseRadius}rem;
     overflow: hidden;
+    flex-basis: 60%;
 
     > div {
       max-height: 24rem;
+      height: 100%;
     }
   `}
 `;
@@ -59,7 +61,7 @@ export const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-shrink: 0;
+  flex-basis: 40%;
 `;
 
 export const Category = styled.p`
