@@ -37,7 +37,15 @@ const PostCard = ({
 
           <S.Details>
             <S.Category>
-              {categories.map((category) => category.name).join(',')}
+              {categories.length ? (
+                categories.map((category) => (
+                  <S.CategoryLabel key={category.id}>
+                    {category.name}
+                  </S.CategoryLabel>
+                ))
+              ) : (
+                <S.CategoryLabel>Sem categoria</S.CategoryLabel>
+              )}
             </S.Category>
             <S.Title>{title}</S.Title>
             <S.Subtitle>{subtitle}</S.Subtitle>

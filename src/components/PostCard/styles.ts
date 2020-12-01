@@ -66,10 +66,36 @@ export const Details = styled.div`
 
 export const Category = styled.p`
   text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   margin-bottom: 0.8rem;
+`;
+
+export const CategoryLabel = styled.span`
+  ${({ theme: { colors, metrics } }) => css`
+    margin-right: 1.2rem;
+    position: relative;
+    padding: 0.2rem 0.8rem;
+    max-width: fit-content;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    color: ${colors.primary};
+
+    ::before {
+      content: '';
+      position: absolute;
+      display: block;
+      opacity: 0.1;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: ${metrics.baseRadius * 2}rem;
+      background: ${colors.primary};
+    }
+  `}
 `;
 
 export const Title = styled.h2`
