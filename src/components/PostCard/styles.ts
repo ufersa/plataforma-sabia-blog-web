@@ -36,7 +36,6 @@ export const ImageWrapper = styled.div`
     width: 100%;
     margin-right: 2.4rem;
     background: ${colors.lightGray4} no-repeat center center;
-    -webkit-background-size: cover;
     background-size: cover;
     border-radius: ${metrics.baseRadius}rem;
     overflow: hidden;
@@ -92,7 +91,7 @@ export const CategoryLabel = styled.span`
       right: 0;
       bottom: 0;
       left: 0;
-      border-radius: ${metrics.baseRadius * 2}rem;
+      border-radius: ${metrics.doubleRadius}rem;
       background: ${colors.primary};
     }
   `}

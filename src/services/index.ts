@@ -9,6 +9,7 @@ const queryPostFragment = `
   thumbnail {
     id
     url
+    alternativeText
   }
   title
   subtitle

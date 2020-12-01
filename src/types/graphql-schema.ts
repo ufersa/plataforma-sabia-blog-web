@@ -6,6 +6,7 @@ export type Category = {
 export type Thumbnail = {
   id: string;
   url: string;
+  alternativeText?: string;
 };
 
 export type Post = {
