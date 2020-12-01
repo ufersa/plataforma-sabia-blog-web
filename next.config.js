@@ -9,6 +9,9 @@ module.exports = withPWA({
 		disable: !isProd,
 	},
 	images: {
-		domains: ['rocketfinalchallenge.s3.amazonaws.com'],
+		domains: [
+			'rocketfinalchallenge.s3.amazonaws.com',
+			'plataforma-sabia.s3.amazonaws.com',
+		],
 	},
 });
