@@ -65,5 +65,5 @@ export const getPost = async (slug = '') => {
 
   const { posts } = await client.request(query, { slug });
 
-  return posts[0];
+  return posts[0] || null;
 };
