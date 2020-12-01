@@ -48,7 +48,7 @@ export const getPosts = async () => {
 export const getPost = async (slug = '') => {
   const query = gql`
     query getPost($slug: String!) {
-      posts(sort: "created_at:desc") {
+      posts {
         ${queryPostFragment}
       }
     }
