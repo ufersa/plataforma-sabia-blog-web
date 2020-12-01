@@ -39,7 +39,7 @@ export const Button = styled.button.attrs({ type: 'button' })`
     padding: 0.4rem 0.8rem;
 
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 700;
 
     text-transform: uppercase;
 
