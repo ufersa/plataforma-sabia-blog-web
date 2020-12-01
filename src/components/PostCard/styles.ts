@@ -1,5 +1,6 @@
 import { PostCardProps } from 'components/PostCard';
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 type WrapperProps = Pick<PostCardProps, 'large'>;
 
@@ -11,16 +12,21 @@ export const Wrapper = styled.article<WrapperProps>`
 
     ${large &&
     css`
-      flex: 1 1 100%;
-      ${ImageWrapper} {
-        max-width: 56rem;
-        > div {
-          max-height: 38rem;
+      ${media.greaterThan('medium')`
+        flex: 1 1 100%;
+        ${ImageWrapper} {
+          max-width: 56rem;
+          > div {
+            max-height: 38rem;
+          }
         }
-      }
-      ${PostLink} {
-        flex-direction: row;
-      }
+        ${PostLink} {
+          flex-direction: row;
+        }
+        ${Details} {
+          margin-left: 1rem;
+        }
+      `}
     `}
   `}
 `;
@@ -29,7 +35,7 @@ export const ImageWrapper = styled.div`
   ${({ theme: { metrics, colors } }) => css`
     width: 100%;
     margin-right: 2.4rem;
-    background: ${colors.lightGray} no-repeat center center;
+    background: ${colors.lightGray4} no-repeat center center;
     -webkit-background-size: cover;
     background-size: cover;
     border-radius: ${metrics.baseRadius}rem;
@@ -43,7 +49,6 @@ export const ImageWrapper = styled.div`
 
 export const PostLink = styled.a`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
 `;
@@ -54,6 +59,7 @@ export const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-shrink: 0;
 `;
 
 export const Category = styled.p`
@@ -70,10 +76,16 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.p`
-  font-size: 1.6rem;
-  margin-bottom: 2.4rem;
+  ${({ theme: { colors } }) => css`
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+    color: ${colors.lightGray};
+  `}
 `;
 
 export const DateWrapper = styled.div`
-  font-size: 1.2rem;
+  ${({ theme: { colors } }) => css`
+    font-size: 1.2rem;
+    color: ${colors.lightGray};
+  `}
 `;
