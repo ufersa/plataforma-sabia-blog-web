@@ -61,7 +61,8 @@ export const Thumbnail = styled.div`
 export const Content = styled.div`
   ${({ theme: { colors } }) => css`
     font-size: 2rem;
-    line-height: 1.24;
+    line-height: 1.32;
+    color: ${colors.black};
 
     img {
       width: 100%;
@@ -96,6 +97,16 @@ export const Content = styled.div`
 
     ul {
       list-style: disc;
+    }
+
+    blockquote {
+      padding-left: 2rem;
+      border-left: 0.8rem solid ${colors.lightGray3};
+      margin: 1rem 0;
+
+      p {
+        font-style: italic;
+      }
     }
   `}
 `;
