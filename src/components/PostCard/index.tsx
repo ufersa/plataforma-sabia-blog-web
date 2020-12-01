@@ -28,9 +28,10 @@ const PostCard = ({
               src={thumbnail?.url || placeholder}
               alt="Capa do artigo"
               layout="responsive"
-              width={560}
-              height={380}
+              width={1280}
+              height={720}
               objectFit="cover"
+              objectPosition="center center"
             />
           </S.ImageWrapper>
 

@@ -5,7 +5,7 @@ type WrapperProps = Pick<PostCardProps, 'large'>;
 
 export const Wrapper = styled.article<WrapperProps>`
   ${({ theme: { colors }, large }) => css`
-    flex: 1 1 30rem;
+    flex: 1 1 31rem;
     padding: 4.8rem 1.2rem;
     border-bottom: 1px solid ${colors.border};
 
@@ -14,6 +14,9 @@ export const Wrapper = styled.article<WrapperProps>`
       flex: 1 1 100%;
       ${ImageWrapper} {
         max-width: 56rem;
+        > div {
+          max-height: 38rem;
+        }
       }
       ${PostLink} {
         flex-direction: row;
@@ -23,13 +26,17 @@ export const Wrapper = styled.article<WrapperProps>`
 `;
 
 export const ImageWrapper = styled.div`
-  ${({ theme: { metrics } }) => css`
+  ${({ theme: { metrics, colors } }) => css`
     width: 100%;
-    max-width: 28rem;
     margin-right: 2.4rem;
+    background: ${colors.lightGray} no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-radius: ${metrics.baseRadius}rem;
+    overflow: hidden;
 
     > div {
-      border-radius: ${metrics.baseRadius}rem;
+      max-height: 24rem;
     }
   `}
 `;
@@ -54,7 +61,7 @@ export const Category = styled.p`
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.8rem;
 `;
 
 export const Title = styled.h2`
