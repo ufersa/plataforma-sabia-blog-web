@@ -1,11 +1,14 @@
-import * as S from './styles';
 import Link from 'next/link';
+
+import * as S from './styles';
+import links from './links';
+import HamburguerMenu from 'components/HamburguerMenu';
 
 const Header = () => {
   return (
     <S.StyledHeader>
       <S.Container>
-        <S.LeftContent>
+        <S.Box>
           <S.LogoContainer>
             <Link href="/" passHref>
               <a>
@@ -15,14 +18,19 @@ const Header = () => {
           </S.LogoContainer>
           <S.MenuLinksWrapper>
             <S.MenuLinksList>
-              <S.MenuLinksItem>
-                <Link href="/" passHref>
-                  <a>Início</a>
-                </Link>
-              </S.MenuLinksItem>
+              {links.map(({ id, label, href }) => (
+                <S.MenuLinksItem key={id}>
+                  <Link href={href} passHref>
+                    <a>{label}</a>
+                  </Link>
+                </S.MenuLinksItem>
+              ))}
             </S.MenuLinksList>
           </S.MenuLinksWrapper>
-        </S.LeftContent>
+        </S.Box>
+        <S.Box>
+          <HamburguerMenu links={links} />
+        </S.Box>
       </S.Container>
     </S.StyledHeader>
   );

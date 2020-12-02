@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 export const StyledHeader = styled.header`
   ${({ theme: { colors, screens } }) => css`
@@ -25,7 +26,7 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const LeftContent = styled.div`
+export const Box = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -47,7 +48,11 @@ export const LogoContainer = styled.div`
   `}
 `;
 
-export const MenuLinksWrapper = styled.nav``;
+export const MenuLinksWrapper = styled.nav`
+  ${media.lessThan('medium')`
+		display: none;
+  `}
+`;
 
 export const MenuLinksList = styled.ul`
   display: flex;
