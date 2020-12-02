@@ -1,8 +1,7 @@
 import { GraphQLClient, gql } from 'graphql-request';
+import envConfig from 'config/env';
 
-const apiEndpoint = process.env.NEXT_PUBLIC_GRAPHQL_API;
-
-const client = new GraphQLClient(apiEndpoint!);
+const client = new GraphQLClient(envConfig.GRAPHQL_API!);
 
 const queryPostFragment = `
   id
@@ -22,21 +21,26 @@ const queryPostFragment = `
   published_at
 `;
 
+type getPostsProps = {
+  start: number;
+  limit: number;
+};
+
 /**
  * Gets all posts
  *
  * @returns {array} All posts
  */
-export const getPosts = async () => {
+export const getPosts = async ({ start, limit }: getPostsProps) => {
   const query = gql`
-    {
-      posts(sort: "created_at:desc") {
+    query getPosts($start: Int!, $limit: Int!) {
+      posts(sort: "created_at:desc", start: $start, limit: $limit) {
         ${queryPostFragment}
       }
     }
   `;
 
-  const { posts } = await client.request(query);
+  const { posts } = await client.request(query, { start, limit });
 
   return posts;
 };
