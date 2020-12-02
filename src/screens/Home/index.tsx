@@ -5,6 +5,7 @@ import * as S from './styles';
 
 export type HomeScreenProps = {
   posts: Post[];
+  postsCount: number;
 };
 
 const Home = ({ posts }: HomeScreenProps) => {

@@ -59,3 +59,20 @@ export const getPost = async (slug = '') => {
 
   return posts[0] || null;
 };
+
+/**
+ * Gets posts count
+ *
+ * @return {number} Posts count
+ */
+export const getPostsCount = async () => {
+  const query = gql`
+    {
+      postsCount
+    }
+  `;
+
+  const { postsCount } = await client.request(query);
+
+  return postsCount;
+};
