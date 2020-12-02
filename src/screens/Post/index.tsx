@@ -53,7 +53,18 @@ const Post = ({ post }: PostScreenProps) => {
         <S.Content
           dangerouslySetInnerHTML={{
             __html: sanitizeHtml(post.content, {
-              allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
+              allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+                'img',
+                'oembed',
+                'iframe',
+                'div',
+              ]),
+              allowedAttributes: {
+                ...sanitizeHtml.defaults.allowedAttributes,
+                oembed: ['url'],
+                iframe: ['src', 'style'],
+                div: ['style'],
+              },
             }),
           }}
         />

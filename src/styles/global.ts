@@ -42,6 +42,10 @@ const GlobalStyles = createGlobalStyle`
       cursor: pointer;
     }
 
+    iframe {
+      border: none;
+    }
+
     /* NProgress Styles */
     #nprogress {
       pointer-events: none;
