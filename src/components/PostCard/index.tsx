@@ -22,31 +22,33 @@ const PostCard = ({
   return (
     <S.Wrapper large={large}>
       <Link href={`/${slug}`}>
-        <S.PostLink>
-          <S.ImageWrapper>
-            <Image
-              src={thumbnail?.url || placeholder}
-              alt="Capa do artigo"
-              layout="responsive"
-              width={1280}
-              height={720}
-              objectFit="cover"
-              objectPosition="center center"
-            />
-          </S.ImageWrapper>
+        <S.ImageWrapper>
+          <Image
+            src={thumbnail?.url || placeholder}
+            alt="Capa do artigo"
+            layout="responsive"
+            width={1024}
+            height={768}
+            objectFit="cover"
+            objectPosition="center center"
+          />
+        </S.ImageWrapper>
+      </Link>
 
-          <S.Details>
-            <S.Category>
-              {categories.length ? (
-                categories.map((category) => (
-                  <S.CategoryLabel key={category.id}>
-                    {category.name}
-                  </S.CategoryLabel>
-                ))
-              ) : (
-                <S.CategoryLabel>Sem categoria</S.CategoryLabel>
-              )}
-            </S.Category>
+      <S.Details>
+        <S.Category>
+          {categories.length ? (
+            categories.map((category) => (
+              <S.CategoryLabel key={category.id}>
+                {category.name}
+              </S.CategoryLabel>
+            ))
+          ) : (
+            <S.CategoryLabel>Sem categoria</S.CategoryLabel>
+          )}
+        </S.Category>
+        <Link href={`/${slug}`}>
+          <a>
             <S.Title>{title}</S.Title>
             <S.Subtitle>{subtitle}</S.Subtitle>
 
@@ -57,9 +59,9 @@ const PostCard = ({
                 year: 'numeric',
               })}
             </S.DateWrapper>
-          </S.Details>
-        </S.PostLink>
-      </Link>
+          </a>
+        </Link>
+      </S.Details>
     </S.Wrapper>
   );
 };

@@ -6,33 +6,35 @@ type WrapperProps = Pick<PostCardProps, 'large'>;
 
 export const Wrapper = styled.article<WrapperProps>`
   ${({ theme: { colors }, large }) => css`
+    display: flex;
+    flex-direction: column;
     flex: 1 1 31rem;
-    padding: 4.8rem 1.2rem;
+    margin: 2.4rem 0;
+    padding: 0 1.2rem 4.8rem;
     border-bottom: 1px solid ${colors.border};
 
     ${large &&
     css`
       ${media.greaterThan('medium')`
+        flex-direction: row;
         flex: 1 1 100%;
         ${ImageWrapper} {
           max-width: 56rem;
-          > div {
-            max-height: 38rem;
-          }
-        }
-        ${PostLink} {
-          flex-direction: row;
+          max-height: 38rem;
+          height: 38rem;
         }
         ${Details} {
           margin-left: 1rem;
+          justify-content: center;
         }
       `}
     `}
   `}
 `;
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.a`
   ${({ theme: { metrics, colors } }) => css`
+    display: flex;
     width: 100%;
     margin-right: 2.4rem;
     background: ${colors.lightGray4} no-repeat center center;
@@ -40,10 +42,12 @@ export const ImageWrapper = styled.div`
     border-radius: ${metrics.baseRadius}rem;
     overflow: hidden;
     flex-basis: 60%;
+    flex-shrink: 0;
+    height: 100%;
+    max-height: 24rem;
 
     > div {
-      max-height: 24rem;
-      height: 100%;
+      flex-grow: 1;
     }
   `}
 `;
@@ -59,8 +63,8 @@ export const Details = styled.div`
   margin-top: 1.6rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-basis: 40%;
+  justify-content: flex-start;
 `;
 
 export const Category = styled.div`
