@@ -7,9 +7,6 @@ export type PostCardProps = {
   large?: boolean;
 } & Post;
 
-const placeholder =
-  'https://rocketfinalchallenge.s3.amazonaws.com/card-image.jpg';
-
 const PostCard = ({
   title,
   subtitle,
@@ -24,7 +21,7 @@ const PostCard = ({
       <Link href={`/${slug}`}>
         <S.ImageWrapper>
           <Image
-            src={thumbnail?.url || placeholder}
+            src={thumbnail?.url || '/img/card-placeholder.jpg'}
             alt="Capa do artigo"
             layout="responsive"
             width={1024}
