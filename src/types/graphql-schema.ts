@@ -15,7 +15,7 @@ export type Post = {
   subtitle?: string;
   thumbnail?: Thumbnail;
   content: string;
-  categories: Category[];
+  categories?: Category[];
   published_at: Date;
   slug: string;
 };
