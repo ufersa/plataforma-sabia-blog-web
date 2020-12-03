@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import { renderWithTheme } from 'utils/tests/helpers';
-import HomeScreen from '..';
+import HomeScreen from '.';
 
 const props = {
   posts: [
