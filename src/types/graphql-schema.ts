@@ -4,7 +4,7 @@ export type Category = {
 };
 
 export type Thumbnail = {
-  id: string;
+  id: string | number;
   url: string;
   alternativeText?: string;
 };
