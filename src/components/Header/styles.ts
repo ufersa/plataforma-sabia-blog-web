@@ -36,10 +36,10 @@ export const LogoContainer = styled.div`
     border-right: 0.1rem solid ${colors.border};
     width: 100%;
     height: 100%;
+    padding: 0 2.4rem;
 
     img {
       height: 100%;
-      width: 100%;
     }
 
     @media (max-width: ${screens.medium}px) {

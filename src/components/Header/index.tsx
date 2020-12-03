@@ -12,7 +12,10 @@ const Header = () => {
           <S.LogoContainer>
             <Link href="/" passHref>
               <a>
-                <img src="/img/logo.svg" alt="Logomarca da plataforma Sabiá" />
+                <img
+                  src="/img/logo-blog.svg"
+                  alt="Logomarca da plataforma Sabiá"
+                />
               </a>
             </Link>
           </S.LogoContainer>
