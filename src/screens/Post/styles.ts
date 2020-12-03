@@ -26,6 +26,7 @@ export const Subtitle = styled.p`
 
 export const PublishDate = styled.p`
   margin-top: 1rem;
+  margin-bottom: 2.4rem;
   font-size: 1.2rem;
 `;
 
@@ -52,7 +53,7 @@ export const CategoryLabel = styled(CardCategoryLabel)`
 
 export const Thumbnail = styled.div`
   ${({ theme: { colors } }) => css`
-    margin: 25px -6vw 50px;
+    margin: 0 -6vw;
     background: ${colors.lightGray4} no-repeat center center;
     background-size: cover;
   `}
@@ -63,6 +64,7 @@ export const Content = styled.div`
     font-size: 2rem;
     line-height: 1.32;
     color: ${colors.black};
+    margin-top: 5.2rem;
 
     img {
       width: 100%;
