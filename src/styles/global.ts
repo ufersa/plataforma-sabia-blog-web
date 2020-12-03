@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
       -webkit-font-smoothing: antialiased;
-      font-family: -apple-system, BlinkMacSystemFont, Montserrat, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       overflow-x: hidden;
     }
 

@@ -14,4 +14,7 @@ module.exports = withPWA({
 			'plataforma-sabia.s3.amazonaws.com',
 		],
 	},
+	experimental: {
+		optimizeFonts: true,
+	},
 });
