@@ -17,17 +17,20 @@ export const Title = styled.h1`
 export const Subtitle = styled.p`
   ${({ theme: { colors } }) => css`
     margin-top: 2.4rem;
-    padding-bottom: 2.4rem;
-    border-bottom: 1px solid ${colors.border};
+    margin-bottom: 1.6rem;
     color: ${colors.lightGray2};
     font-size: 2.4rem;
   `}
 `;
 
 export const PublishDate = styled.p`
-  margin-top: 1rem;
-  margin-bottom: 2.4rem;
-  font-size: 1.2rem;
+  ${({ theme: { colors } }) => css`
+    border-top: 1px solid ${colors.border};
+    padding-top: 1.6rem;
+    margin-top: 1rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.2rem;
+  `}
 `;
 
 export const Category = styled(CardCategory)``;
