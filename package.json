@@ -24,6 +24,7 @@
     }
   },
   "dependencies": {
+    "@styled-icons/fa-brands": "^10.22.0",
     "@types/nprogress": "^0.2.0",
     "graphql": "^15.4.0",
     "graphql-request": "^3.3.0",
