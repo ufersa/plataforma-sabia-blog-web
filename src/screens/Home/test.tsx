@@ -8,7 +8,7 @@ const props = {
       id: 1,
       title: 'Title',
       content: 'Content',
-      published_at: new Date(),
+      published_at: '2020-12-03T19:25:00.234Z',
       slug: 'title',
     },
   ],
