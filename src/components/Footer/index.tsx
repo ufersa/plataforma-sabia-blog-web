@@ -25,10 +25,16 @@ const Footer = () => {
       </S.SocialMedia>
       <S.Content>
         <S.ImageWrapper>
-          <img
-            src="/img/logo-blog.svg"
-            alt="Logomarca do blog da plataforma sabiá"
-          />
+          <a
+            href="https://plataformasabia.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="/img/logo-plataforma-white.svg"
+              alt="Logomarca da Plataforma Sabiá"
+            />
+          </a>
         </S.ImageWrapper>
 
         <S.SiteInfosSection>

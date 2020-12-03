@@ -52,7 +52,7 @@ export const Content = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 0 4.8rem;
+  padding: 3.2rem 4.8rem;
   word-break: break-word;
   width: 100%;
 `;
@@ -61,9 +61,14 @@ export const ImageWrapper = styled.div`
   display: flex;
   max-width: 27rem;
   flex-shrink: 1;
+  margin-right: 1.6rem;
+  margin-bottom: 1.6rem;
 
-  > img {
-    width: 100%;
+  > a {
+    display: flex;
+    > img {
+      width: 100%;
+    }
   }
 `;
 
@@ -71,7 +76,7 @@ export const SiteInfosSection = styled.div`
   ${({ theme: { colors } }) => css`
     display: flex;
     flex-direction: column;
-    margin: 3.2rem;
+    margin: 1.2rem 3.2rem;
     margin-right: auto;
     color: ${colors.white};
     font-weight: 500;
