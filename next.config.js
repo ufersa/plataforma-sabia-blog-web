@@ -17,4 +17,13 @@ module.exports = withPWA({
 	experimental: {
 		optimizeFonts: true,
 	},
+	async redirects() {
+		return [
+			{
+				source: '/admin',
+				destination: 'https://google.com',
+				permanent: true,
+			},
+		];
+	},
 });
