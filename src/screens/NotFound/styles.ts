@@ -8,6 +8,7 @@ export const Content = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0 5vw;
+    margin-bottom: 4.6rem;
 
     > h1 {
       color: ${colors.secondary};
