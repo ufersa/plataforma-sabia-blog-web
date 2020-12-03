@@ -9,9 +9,9 @@ export type PostCardProps = {
 
 const PostCard = ({
   title,
-  subtitle,
+  subtitle = '',
   thumbnail,
-  categories,
+  categories = [],
   published_at,
   slug,
   large,
