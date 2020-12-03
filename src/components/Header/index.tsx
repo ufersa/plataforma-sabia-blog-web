@@ -18,10 +18,10 @@ const Header = () => {
           </S.LogoContainer>
           <S.MenuLinksWrapper>
             <S.MenuLinksList>
-              {links.map(({ id, label, href }) => (
+              {links.map(({ id, label, href, openInNewTab }) => (
                 <S.MenuLinksItem key={id}>
                   <Link href={href} passHref>
-                    <a>{label}</a>
+                    <a target={openInNewTab ? '_blank' : '_self'}>{label}</a>
                   </Link>
                 </S.MenuLinksItem>
               ))}

@@ -63,6 +63,7 @@ export const MenuLinksList = styled.ul`
 export const MenuLinksItem = styled.li`
   ${({ theme: { colors, screens } }) => css`
     font-size: 1.5rem;
+    white-space: nowrap;
 
     a {
       font-weight: 500;
