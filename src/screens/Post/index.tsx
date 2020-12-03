@@ -25,8 +25,8 @@ const Post = ({ post }: PostScreenProps) => {
         <Container>
           <div>
             <S.Category>
-              {post.categories.length ? (
-                post.categories.map((category) => (
+              {post.categories?.length ? (
+                post.categories?.map((category) => (
                   <S.CategoryLabel key={category.id} as="a" href="#">
                     {category.name}
                   </S.CategoryLabel>
