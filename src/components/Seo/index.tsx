@@ -4,7 +4,7 @@ type SEOProps = {
   seo: {
     metaTitle: string;
     metaDescription?: string;
-    shareImage: string;
+    shareImage?: string;
     article: boolean;
   };
 };

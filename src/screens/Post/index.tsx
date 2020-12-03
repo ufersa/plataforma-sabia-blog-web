@@ -14,7 +14,7 @@ const Post = ({ post }: PostScreenProps) => {
   const seo = {
     metaTitle: post.title,
     metaDescription: post.subtitle,
-    shareImage: post.thumbnail?.url || '/img/card-placeholder.jpeg',
+    shareImage: post.thumbnail?.url,
     article: true,
   };
 
