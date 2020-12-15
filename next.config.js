@@ -11,7 +11,7 @@ module.exports = withPWA({
 	images: {
 		domains: [
 			'rocketfinalchallenge.s3.amazonaws.com',
-			'plataforma-sabia.s3.amazonaws.com',
+			'plataforma-sabia-blog-production.s3.sa-east-1.amazonaws.com',
 		],
 	},
 	experimental: {
