@@ -8,17 +8,47 @@ export const Wrapper = styled.div`
   `}
 `;
 
-export const SocialMedia = styled.div`
+export const FooterHeader = styled.div`
   ${({ theme: { colors } }) => css`
-    display: flex;
-    justify-content: flex-end;
+    padding: 0 3rem;
     background-color: ${colors.primary};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ${media.lessThan('large')`
+      padding: 0;
+    `}
+  `}
+`;
+
+export const FooterText = styled.p`
+  ${({ theme: { colors } }) => css`
+    color: ${colors.white};
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 100%;
+
+    ${media.lessThan('large')`
+      display: none;
+    `}
+  `}
+`;
+
+export const SocialMedia = styled.div`
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+
+  ${media.lessThan('large')`
+    width: 100%;
   `}
 `;
 
 export const SocialMediaLink = styled.a`
   ${({ theme: { colors } }) => css`
     padding: 2.4rem 3.2rem;
+    border-left: 1px solid ${colors.border};
 
     > svg {
       color: ${colors.white};
@@ -27,18 +57,17 @@ export const SocialMediaLink = styled.a`
       transition: color 0.2s;
     }
 
-    border-left: 1px solid ${colors.border};
-
     :hover {
       > svg {
         color: ${colors.secondary};
       }
     }
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('large')`
       flex-grow: 1;
       display: flex;
       justify-content: center;
+      padding: 2.4rem 0;
 
       :first-child {
         border-left: none;
@@ -99,5 +128,79 @@ export const SiteInfosSection = styled.div`
         box-shadow: 0px 0px 4px 2px ${colors.primary};
       }
     }
+  `}
+`;
+
+export const SiteSocket = styled.div`
+  ${({ theme: { colors } }) => css`
+    color: ${colors.secondary};
+    background-color: ${colors.border};
+    width: 100%;
+    padding: 6rem 3rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.07rem;
+
+    ${media.lessThan('medium')`
+      padding: 3rem;
+    `}
+  `}
+`;
+
+export const SiteSocketContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: ${({ theme }) => theme.metrics.containerWidth}rem;
+  width: 100%;
+  margin: 0 auto;
+
+  > div {
+    width: 50%;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  ${media.lessThan('large')`
+    flex-direction: column;
+
+    div {
+      text-align: center;
+      margin-bottom: 3rem;
+      width: 100%;
+    }
+  `}
+`;
+
+export const SiteSocketList = styled.ul`
+  display: flex;
+  align-items: center;
+
+  ${media.lessThan('large')`
+    width: 100%;
+    justify-content: space-around;
+  `}
+
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
+`;
+
+export const SiteSocketListItem = styled.li`
+  margin-left: 1.5rem;
+
+  a {
+    font-weight: 500;
+    color: ${({ theme }) => theme.colors.secondary};
+
+    :hover {
+      color: ${({ theme }) => theme.colors.darkGreen};
+    }
+  }
+
+  ${media.lessThan('medium')`
+    margin: 2rem 0;
   `}
 `;
