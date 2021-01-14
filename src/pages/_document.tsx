@@ -38,14 +38,19 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-          <!-- Global site tag (gtag.js) - Google Analytics -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNNTWV6G48"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-QNNTWV6G48');
-          </script>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-QNNTWV6G48"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-QNNTWV6G48');
+					`,
+            }}
+          />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap"
