@@ -69,6 +69,12 @@ export const Content = styled.div`
     color: ${colors.black};
     margin-top: 5.2rem;
 
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+
     img {
       width: 100%;
     }
