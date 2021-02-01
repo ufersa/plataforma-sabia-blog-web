@@ -21,7 +21,7 @@ module.exports = withPWA({
 		return [
 			{
 				source: '/admin',
-				destination: 'https://google.com',
+				destination: 'https://blog-api.plataformasabia.com/admin',
 				permanent: true,
 			},
 		];
