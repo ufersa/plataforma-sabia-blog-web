@@ -1,5 +1,6 @@
 import { Container } from 'components/Container';
 import SEO from 'components/Seo';
+import Share from 'components/Share';
 import Image from 'next/image';
 import sanitizeHtml from 'sanitize-html';
 
@@ -39,14 +40,18 @@ const Post = ({ post }: PostScreenProps) => {
             </S.Category>
             <S.Title>{post.title}</S.Title>
             {!!post.subtitle && <S.Subtitle>{post.subtitle}</S.Subtitle>}
-            <S.PublishDate>
-              <strong>Publicado em: </strong>
-              {new Date(post.published_at).toLocaleDateString('pt-BR', {
-                day: '2-digit',
-                month: 'short',
-                year: 'numeric',
-              })}
-            </S.PublishDate>
+
+            <S.DateAndShare>
+              <p>
+                <strong>Publicado em: </strong>
+                {new Date(post.published_at).toLocaleDateString('pt-BR', {
+                  day: '2-digit',
+                  month: 'short',
+                  year: 'numeric',
+                })}
+              </p>
+              <Share />
+            </S.DateAndShare>
 
             {!!post.thumbnail && (
               <S.Thumbnail>

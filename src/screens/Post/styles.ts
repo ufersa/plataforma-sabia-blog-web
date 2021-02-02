@@ -23,13 +23,19 @@ export const Subtitle = styled.p`
   `}
 `;
 
-export const PublishDate = styled.p`
+export const DateAndShare = styled.div`
   ${({ theme: { colors } }) => css`
+    display: flex;
+    align-items: center;
     border-top: 1px solid ${colors.border};
     padding-top: 1.6rem;
     margin-top: 1rem;
     margin-bottom: 2.4rem;
-    font-size: 1.2rem;
+
+    > p {
+      font-size: 1.2rem;
+      margin-right: 1.2rem;
+    }
   `}
 `;
 
