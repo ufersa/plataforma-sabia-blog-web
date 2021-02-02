@@ -103,7 +103,7 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
     const { modalProps } = state;
 
     if (modalProps.customModal) {
-      return createElement<>(ModalComponent, {
+      return createElement(ModalComponent, {
         closeModal,
         ...state.props,
       });
