@@ -6,9 +6,9 @@ import {
   Whatsapp,
 } from '@styled-icons/fa-brands';
 import { ContentCopy } from '@styled-icons/material-outlined';
-// import { StyledInput } from '../../Form/styles';
+import theme from 'styles/theme';
 
-const defaultIconProps = ({ theme: { sizes } }) => ({
+const defaultIconProps = ({ theme: { sizes } }: { theme: typeof theme }) => ({
   size: sizes.largeIcon * 10,
 });
 

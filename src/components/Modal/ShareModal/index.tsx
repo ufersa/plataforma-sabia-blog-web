@@ -12,7 +12,9 @@ import {
   CopiedText,
 } from './styles';
 
-const socialNetworks = {
+const socialNetworks: {
+  [key: string]: { url: string; icon: React.FunctionComponent<unknown> };
+} = {
   facebook: {
     url: 'https://facebook.com/sharer/sharer.php?u=:url',
     icon: FacebookIcon,
@@ -32,18 +34,27 @@ const socialNetworks = {
 };
 
 const ShareModal = () => {
-  const pageUrlRef = useRef(null);
+  const pageUrlRef = useRef<HTMLInputElement>(null);
   const [copiedToClipboard, setCopiedToClipboard] = useState(false);
 
-  const handleSocialShare = useCallback((service) => {
-    setCopiedToClipboard(false);
-    const pageUrl = encodeURIComponent(pageUrlRef.current.value);
-    const serviceUrl = socialNetworks[service].url.replace(':url', pageUrl);
-    window.open(serviceUrl, '_blank', 'noopener');
-  }, []);
+  const handleSocialShare = useCallback(
+    (service: keyof typeof socialNetworks) => {
+      setCopiedToClipboard(false);
+
+      if (pageUrlRef.current) {
+        const pageUrl = encodeURIComponent(pageUrlRef.current.value);
+        const serviceUrl = socialNetworks[service]?.url.replace(
+          ':url',
+          pageUrl,
+        );
+        window.open(serviceUrl, '_blank', 'noopener');
+      }
+    },
+    [],
+  );
 
   const handleCopyToClipboard = useCallback(() => {
-    pageUrlRef.current.select();
+    pageUrlRef?.current?.select();
     document.execCommand('copy');
     setCopiedToClipboard(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -55,7 +66,7 @@ const ShareModal = () => {
 
       <IconsWrapper>
         {Object.keys(socialNetworks).map((service) => {
-          const SocialIcon = socialNetworks[service].icon;
+          const SocialIcon = socialNetworks[service]?.icon;
           return (
             <Button
               aria-label={service}
