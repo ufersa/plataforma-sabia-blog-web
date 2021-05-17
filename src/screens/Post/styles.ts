@@ -3,6 +3,7 @@ import {
   Category as CardCategory,
   CategoryLabel as CardCategoryLabel,
 } from 'components/PostCard/styles';
+import media from 'styled-media-query';
 
 export const Wrapper = styled.article`
   padding: 4.8rem 2rem;
@@ -10,8 +11,12 @@ export const Wrapper = styled.article`
 `;
 
 export const Title = styled.h1`
-  font-size: 4.6rem;
+  font-size: 4.2rem;
   font-weight: 700;
+
+  ${media.lessThan('medium')`
+    font-size: 3.2rem;
+  `}
 `;
 
 export const Subtitle = styled.p`
@@ -20,6 +25,10 @@ export const Subtitle = styled.p`
     margin-bottom: 1.6rem;
     color: ${colors.lightGray2};
     font-size: 2rem;
+
+    ${media.lessThan('medium')`
+      font-size: 1.6rem;
+    `}
   `}
 `;
 
@@ -39,7 +48,11 @@ export const DateAndShare = styled.div`
   `}
 `;
 
-export const Category = styled(CardCategory)``;
+export const Category = styled(CardCategory)`
+  a {
+    font-size: 1rem;
+  }
+`;
 
 export const CategoryLabel = styled(CardCategoryLabel)`
   ${({ theme: { colors } }) => css`
@@ -60,12 +73,12 @@ export const CategoryLabel = styled(CardCategoryLabel)`
   `}
 `;
 
-export const Thumbnail = styled.div`
+export const Thumbnail = styled.div``;
+
+export const ImageBackground = styled.div`
   ${({ theme: { colors } }) => css`
-    margin: 0 auto 1rem;
     background: ${colors.lightGray4} no-repeat center center;
     background-size: cover;
-    max-width: 80rem;
   `}
 `;
 
@@ -74,11 +87,12 @@ export const Content = styled.div`
     font-size: 2rem;
     line-height: 1.32;
     color: ${colors.black};
-    margin-top: 5.2rem;
+    margin: 5.2rem auto 0;
+    max-width: 64.8rem;
 
     p {
-      font-size: 1.5rem;
-      line-height: 1.5;
+      font-size: 2rem;
+      line-height: 3.2rem;
       margin-bottom: 0.5rem;
     }
 
@@ -126,5 +140,29 @@ export const Content = styled.div`
         font-style: italic;
       }
     }
+
+    ${media.lessThan('medium')`
+      p {
+        font-size: 1.4rem;
+      }
+    `}
+  `}
+`;
+
+export const PostHeader = styled.div`
+  max-width: 80rem;
+  margin: 0 auto;
+`;
+
+export const ContentWrapper = styled.div`
+  max-width: 80rem;
+  margin: 0 auto;
+`;
+
+export const ThumbnailCaption = styled.p`
+  ${({ theme: { colors } }) => css`
+    font-size: 1.2rem;
+    margin-top: 1.6rem;
+    color: ${colors.lightGray};
   `}
 `;
