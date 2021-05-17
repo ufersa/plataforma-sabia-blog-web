@@ -25,6 +25,20 @@ const Post = ({ post }: PostScreenProps) => {
       <S.Wrapper>
         <Container>
           <div>
+            {!!post.thumbnail && (
+              <S.Thumbnail>
+                <Image
+                  src={post.thumbnail.url}
+                  alt={post.thumbnail.alternativeText}
+                  layout="responsive"
+                  width={1280}
+                  height={720}
+                />
+              </S.Thumbnail>
+            )}
+
+            <S.Title>{post.title}</S.Title>
+            {!!post.subtitle && <S.Subtitle>{post.subtitle}</S.Subtitle>}
             <S.Category>
               {post.categories?.length ? (
                 post.categories?.map((category) => (
@@ -38,8 +52,6 @@ const Post = ({ post }: PostScreenProps) => {
                 </S.CategoryLabel>
               )}
             </S.Category>
-            <S.Title>{post.title}</S.Title>
-            {!!post.subtitle && <S.Subtitle>{post.subtitle}</S.Subtitle>}
 
             <S.DateAndShare>
               <p>
@@ -52,18 +64,6 @@ const Post = ({ post }: PostScreenProps) => {
               </p>
               <Share />
             </S.DateAndShare>
-
-            {!!post.thumbnail && (
-              <S.Thumbnail>
-                <Image
-                  src={post.thumbnail.url}
-                  alt={post.thumbnail.alternativeText}
-                  layout="responsive"
-                  width={1280}
-                  height={720}
-                />
-              </S.Thumbnail>
-            )}
           </div>
           <S.Content
             dangerouslySetInnerHTML={{

@@ -10,8 +10,8 @@ export const Wrapper = styled.article`
 `;
 
 export const Title = styled.h1`
-  font-size: 5.4rem;
-  font-weight: 800;
+  font-size: 4.6rem;
+  font-weight: 700;
 `;
 
 export const Subtitle = styled.p`
@@ -19,7 +19,7 @@ export const Subtitle = styled.p`
     margin-top: 2.4rem;
     margin-bottom: 1.6rem;
     color: ${colors.lightGray2};
-    font-size: 2.4rem;
+    font-size: 2rem;
   `}
 `;
 
@@ -62,9 +62,10 @@ export const CategoryLabel = styled(CardCategoryLabel)`
 
 export const Thumbnail = styled.div`
   ${({ theme: { colors } }) => css`
-    margin: 0 -6vw;
+    margin: 0 auto 1rem;
     background: ${colors.lightGray4} no-repeat center center;
     background-size: cover;
+    max-width: 80rem;
   `}
 `;
 
