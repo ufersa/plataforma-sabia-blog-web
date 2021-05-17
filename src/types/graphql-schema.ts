@@ -7,6 +7,7 @@ export type Thumbnail = {
   id: string | number;
   url: string;
   alternativeText?: string;
+  caption?: string;
 };
 
 export type Post = {
