@@ -1,4 +1,4 @@
-name: Sabia Platform Blog - Production Deployment Dispatch
+name: Sabia Platform Blog - Staging Deployment Dispatch
 
 on:
   workflow_dispatch:
