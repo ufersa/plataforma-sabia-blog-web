@@ -30,11 +30,11 @@ jobs:
           file: ./Dockerfile
           tags: plataformasabia/blog-web:${{ github.sha }}
           
-      - name: Executing remote ssh commands using ssh key on vps_1
+      - name: Executing remote ssh commands using ssh key on vps_2
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.DEPLOY_HOST_VPS_1 }}
-          username: ${{ secrets.DEPLOY_USER_VPS_1 }}
-          key: ${{ secrets.DEPLOY_KEY_VPS_1 }}
-          port: ${{ secrets.DEPLOY_PORT_VPS_1 }}
+          host: ${{ secrets.DEPLOY_HOST_VPS_2 }}
+          username: ${{ secrets.DEPLOY_USER_VPS_2 }}
+          key: ${{ secrets.DEPLOY_KEY_VPS_2 }}
+          port: ${{ secrets.DEPLOY_PORT_VPS_2 }}
           script: ./deploy-image-to-vps-blog-web.sh ${{ github.sha }}
