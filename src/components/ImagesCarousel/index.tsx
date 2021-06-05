@@ -14,7 +14,6 @@ const ImagesCarousel = ({ gallery }: Props) => {
       <S.CarouselContainer
         arrows={false}
         dots
-        lazyLoad
         infinite
         speed={500}
         slidesToShow={1}
