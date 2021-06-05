@@ -1,4 +1,5 @@
 import { Container } from 'components/Container';
+import ImagesCarousel from 'components/ImagesCarousel';
 import SEO from 'components/Seo';
 import Share from 'components/Share';
 import Image from 'next/image';
@@ -91,6 +92,8 @@ const Post = ({ post }: PostScreenProps) => {
                 }),
               }}
             />
+
+            {!!post.gallery && <ImagesCarousel gallery={post.gallery} />}
           </S.ContentWrapper>
         </Container>
       </S.Wrapper>

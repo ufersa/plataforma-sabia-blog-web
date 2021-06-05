@@ -87,7 +87,7 @@ export const Content = styled.div`
     font-size: 2rem;
     line-height: 1.32;
     color: ${colors.black};
-    margin: 5.2rem auto 0;
+    margin: 5.2rem auto 3.2rem;
     max-width: 64.8rem;
 
     p {

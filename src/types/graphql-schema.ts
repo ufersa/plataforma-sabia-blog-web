@@ -10,6 +10,12 @@ export type Thumbnail = {
   caption?: string;
 };
 
+export type GalleryImage = {
+  alternativeText: string;
+  url: string;
+  caption?: string;
+};
+
 export type Post = {
   id: string | number;
   title: string;
@@ -18,5 +24,6 @@ export type Post = {
   content: string;
   categories?: Category[];
   published_at: string;
+  gallery?: GalleryImage[];
   slug: string;
 };
