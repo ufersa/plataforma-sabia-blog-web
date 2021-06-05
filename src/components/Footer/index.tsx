@@ -15,7 +15,7 @@ const Footer = () => {
         <S.FooterText>Siga o sabiá por onde ele for!</S.FooterText>
         <S.SocialMedia>
           <S.SocialMediaLink
-            href="https://www.facebook.com/plataformasabiaufersa"
+            href="https://www.facebook.com/plataformadigitalsabia"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -68,7 +68,7 @@ const Footer = () => {
         <S.SiteInfosSection>
           <h4>Plataforma</h4>
           <a
-            href="http://plataformasabia.com/about#platform"
+            href="http://plataformasabia.com/about#intro"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -109,55 +109,41 @@ const Footer = () => {
         <S.SiteInfosSection>
           <h4>Recursos</h4>
           <a
-            href="http://plataformasabia.com/courses"
+            href="https://cursos.plataformasabia.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Cursos
           </a>
-          <a
-            href="http://plataformasabia.com/forum"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Fórum
-          </a>
-          <a
-            href="http://plataformasabia.com/help"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ajuda
-          </a>
           <Link href="/">
             <a>Blog</a>
           </Link>
           <a
-            href="http://plataformasabia.com/ideas-bank"
+            href="http://plataformasabia.com/ideias"
             target="_blank"
             rel="noopener noreferrer"
           >
             Banco de Ideias
           </a>
           <a
-            href="http://plataformasabia.com/announcements-bank"
+            href="http://plataformasabia.com/editais"
             target="_blank"
             rel="noopener noreferrer"
           >
             Banco de Editais
           </a>
           <a
-            href="http://plataformasabia.com/researchers-bank"
+            href="http://plataformasabia.com/vitrines"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Banco de Pesquisadores
+            Vitrines tecnológicas
           </a>
         </S.SiteInfosSection>
         <S.SiteInfosSection>
           <h4>Contato</h4>
           <a
-            href="http://plataformasabia.com/contact-us"
+            href="http://plataformasabia.com/about#contact"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -195,7 +181,7 @@ const Footer = () => {
             </S.SiteSocketListItem>
             <S.SiteSocketListItem>
               <a
-                href="http://plataformasabia.com/contact-us"
+                href="http://plataformasabia.com/about#contact"
                 target="_blank"
                 rel="noopener noreferrer"
               >
