@@ -17,6 +17,11 @@ const queryPostFragment = `
     id
     name
   }
+  gallery {
+    alternativeText
+    url
+    caption
+  }
   slug
   published_at
 `;
