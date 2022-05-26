@@ -14,7 +14,7 @@ const props = {
   published_at: '2020-12-03T19:25:00.234Z',
   thumbnail: {
     id: 1,
-    url: 'thumbnail.jpg',
+    url: '/img/thumbnail.jpg',
   },
   slug: 'post-title',
   large: false,
@@ -38,6 +38,13 @@ const mockRouter: NextRouter = {
     emit: jest.fn(),
   },
   isFallback: false,
+  locale: undefined,
+  isReady: false,
+  locales: undefined,
+  defaultLocale: undefined,
+  domainLocales: undefined,
+  isPreview: false,
+  isLocaleDomain: false,
 };
 
 describe('<Footer />', () => {
@@ -73,6 +80,7 @@ describe('<Footer />', () => {
     expect(mockRouter.push).toHaveBeenCalledTimes(2);
     expect(mockRouter.push).toHaveBeenCalledWith('/post-title', '/post-title', {
       locale: undefined,
+      scroll: true,
       shallow: undefined,
     });
   });
